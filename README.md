@@ -64,16 +64,6 @@ streamlit run app.py
 
 ---
 
-## 🖼 Screenshots (Optional)
-
-You can add example screenshots here once the app is running, like:
-
-- Dataset preview
-- EDA plots
-- Model comparison chart
-- Prediction form
-
----
 
 ## 🛠 Requirements
 
