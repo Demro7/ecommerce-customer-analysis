@@ -23,9 +23,11 @@ ecommerce-analysis/
 ├── app.py               # Main Streamlit app (UI and navigation)
 ├── app_logic.py         # Core logic (EDA, preprocessing, model training)
 ├── ecommerce.csv        # Dataset
+├── main.ipynb           # Jupyter Notebook version for analysis and model building
 ├── requirements.txt     # Required dependencies
 ├── models/              # Saved trained models (created after training)
 └── data/                # Processed datasets (created after preprocessing)
+
 ```
 
 ---
