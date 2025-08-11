@@ -1,4 +1,3 @@
-#__________________________________________________________________________________________1
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -26,7 +25,7 @@ def save_model(model, model_name):
         os.makedirs("models")
     with open(f"models/{model_name}.pkl", "wb") as f:
         pickle.dump(model, f)
-#_____________________________________________________________________________________________________________________2
+
 def preprocess_data(df, test_size=0.2):
     df_processed = df.copy()
     
@@ -94,7 +93,7 @@ def preprocess_data(df, test_size=0.2):
     y_test.to_csv("data/y_test.csv", index=False)
     
     return X_train_df, X_test_df, y_train, y_test, preprocessor, numerical_features, categorical_features
-#________________________________________________________________________________________________________________________4
+
 def train_models(X_train, y_train, X_test, y_test, models_to_train):
     results = {}
     
@@ -138,7 +137,7 @@ def train_models(X_train, y_train, X_test, y_test, models_to_train):
     results_df.to_csv("data/model_results.csv", index=False)
     
     return results_df
-#_____________________________________________________________________________________________________________3
+
 def plot_eda(df, feature=None):
     plots = []
     
