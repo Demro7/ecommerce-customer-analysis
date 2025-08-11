@@ -1,4 +1,3 @@
-#_______________________________________________________________________________________________________________________1
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -38,7 +37,7 @@ if df is not None:
             st.write(missing_values[missing_values > 0])
         else:
             st.success("No missing values found in the dataset.")
-            #______________________________________________________________________________________2
+            
     elif page == "Data Preprocessing":
         st.header("Data Preprocessing")
         test_size = st.slider("Test size (%):", 10, 40, 20)
@@ -52,7 +51,7 @@ if df is not None:
             st.success("Data processed and saved successfully!")
         except Exception as e:
             st.error(f"Error: {e}")
-          #_____________________________________________________________________________________________________________3  
+            
     elif page == "EDA":
         st.header("Exploratory Data Analysis")
         numeric_df = df.select_dtypes(include=["float64", "int64"])
@@ -72,7 +71,7 @@ if df is not None:
             fig, correlation = plots[2]
             st.pyplot(fig)
             st.write(f"Correlation: {correlation:.4f}")
-            #_________________________________________________________________________________________________________________4
+            
     elif page == "Model Training":
         st.header("Model Training")
         try:
@@ -122,7 +121,7 @@ if df is not None:
         except Exception as e:
             st.error(f"Error: {e}")
             st.warning("Please complete the Data Preprocessing first!")
-         #_______________________________________________________________________________________________________________5   
+
     elif page == "Model Evaluation":
         st.header("Model Evaluation")
         try:
@@ -190,7 +189,7 @@ if df is not None:
         except Exception as e:
             st.error(f"Error: {e}")
             st.warning("Please train models first!")
-          #_______________________________________________________________________________________________________________6  
+
     elif page == "Prediction":
         st.header("Make Predictions")
         try:
